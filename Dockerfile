@@ -10,7 +10,6 @@ RUN apt install -y 	apt-utils \
 						curl \
 						gnupg \
 						procps \
-						supervisor \
 						git \
 						build-essential \
 						vim \
@@ -23,7 +22,7 @@ RUN set -ex \
 	&& curl -sL https://deb.nodesource.com/setup_12.x | bash - \
 	&& apt-get install -y nodejs \
 	&& npm i npm@6.14.8 -g \
-	&& npm install -g @angular/cli@11.2.1
+	&& npm install -g @angular/cli@10.2.4
 
 ADD default.conf /etc/nginx/conf.d/default.conf
 
